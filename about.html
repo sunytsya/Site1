@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo">
+            <img src="D:/JS/image/logo.jpg" alt="Логотип Зупинка">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>Форма зворотнього зв'язку</h1>
+        <div class="form">
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" placeholder="Ваше ім'я">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Прізвище</label>
+                    <input type="text" id="surname" placeholder="Ваше прізвище">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ваш email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" id="phone" placeholder="Ваш номер телефону">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Коментар</label>
+                    <textarea id="comment" rows="5" placeholder="Ваш коментар"></textarea>
+                </div>
+                <button class="button_form" type="submit">Відправити</button>
+                <div id="error-container" class="error"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Кафе "Зупинка"</p>
+    </footer>
+
+    <script src="D:\JS\about.js"></script>
+</body>
+</html>

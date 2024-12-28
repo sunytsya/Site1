@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id = "header">
+        <div class="logo">
+            <img src="D:/JS/image/logo.jpg" alt="Логотип Зупинка">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="spinner" id="spinner">
+        <div></div>
+    </div>
+
+    <main>
+        <h1>Наше меню</h1>
+        <div class="gallery-container">
+            <div class="large-image-container">
+                <img id="largeImg" src="image/dish1.jpg" alt="Зображення">
+            </div>
+            <ul id="thumbs">
+                <li><a href="image/dish1.jpg" title="Смажені зелені помідори"><img src="image/dish1.jpg" alt="Dish 1"></a></li>
+                <li><a href="image/dish2.jpg" title="Салат зі зеленими помідорами"><img src="image/dish2.jpg" alt="Dish 2"></a></li>
+                <li><a href="image/dish3.jpg" title="Відбивні зі свинини"><img src="image/dish3.jpg" alt="Dish 3"></a></li>
+                <li><a href="image/dish4.jpg" title="Смажена бамія"><img src="image/dish4.jpg" alt="Dish 4"></a></li>
+                <li><a href="image/dish5.jpg" title="Смажений батат"><img src="image/dish5.jpg" alt="Dish 5"></a></li>
+                <li><a href="image/dish6.jpg" title="Салат з лімською квасолею"><img src="image/dish6.jpg" alt="Dish 6"></a></li>
+                <li><a href="image/dish7.jpg" title="Кукурудза з вершками"><img src="image/dish7.jpg" alt="Dish 7"></a></li>
+                <li><a href="image/dish8.jpg" title="Курячі відбивні"><img src="image/dish8.jpg" alt="Dish 8"></a></li>
+                <li><a href="image/dish9.jpg" title="Кукурудзяна каша"><img src="image/dish9.jpg" alt="Dish 9"></a></li>
+            </ul>
+        </div>
+
+        <section id="menu">
+            <div id="dish-list">
+                <section id="tomatoes">
+                    <img src="image\dish1.jpg" alt="fried green tomatoes" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Смажені зелені помідори</h2>
+                    <p>Ціна: 50 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Смажені зелені помідори" data-price="50">Замовити</button>
+                </section>
+                <section id="salad">
+                    <img src="image\dish2.jpg" alt="Salad with green tomatoes" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Салат зі зеленими помідорами</h2>
+                    <p>Ціна: 30 грн</p>
+                    <p>Вага: 200 г</p>
+                    <button class="order-btn" data-name="Салат зі зеленими помідорами" data-price="30">Замовити</button>
+                </section>
+                <section id="chops">
+                    <img src="image\dish3.jpg" alt="Pork chops" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Відбивні зі свинини</h2>
+                    <p>Ціна: 70 грн</p>
+                    <p>Вага: 300 г</p>
+                    <button class="order-btn" data-name="Відбивні зі свинини" data-price="70">Замовити</button>
+                </section>
+                <section id="okra">
+                    <img src="image\dish4.jpg" alt="Fried okra" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Смажена бамія</h2>
+                    <p>Ціна: 40 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Смажена бамія" data-price="40">Замовити</button>
+                </section>
+                <section id="potato">
+                    <img src="image\dish5.jpg" alt="Fried sweet potato" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Смажений батат</h2>
+                    <p>Ціна: 55 грн</p>
+                    <p>Вага: 350 г</p>
+                    <button class="order-btn" data-name="Смажений батат" data-price="55">Замовити</button>
+                </section>
+                <section id="beans">
+                    <img src="image\dish6.jpg" alt="lima beans" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Салат з лімською квасолею</h2>
+                    <p>Ціна: 35 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Салат з лімською квасолею" data-price="35">Замовити</button>
+                </section>
+
+                <section id="corn">
+                    <img src="image\dish7.jpg" alt="creamed corn" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Кукурудза з вершками</h2>
+                    <p>Ціна: 25 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Кукурудза з вершками" data-price="25">Замовити</button>
+                </section>
+        
+                <section id="chicken">
+                    <img src="image\dish8.jpg" alt="chicken chops" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Курячі відбивні</h2>
+                    <p>Ціна: 60 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Курячі відбивні" data-price="60">Замовити</button>
+                </section>
+        
+                <section id="porridge">
+                    <img src="image\dish9.jpg" alt="corn porridge" style="float: right; margin: 0 0 10px 10px;" width="400" height="200">
+                    <h2>Кукурудзяна каша</h2>
+                    <p>Ціна: 50 грн</p>
+                    <p>Вага: 250 г</p>
+                    <button class="order-btn" data-name="Кукурудзяна каша" data-price="50">Замовити</button>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="menu-calculator">
+            <h2>Підрахунок замовлення</h2>
+            <div id="calculator">
+                <div id="dishInputs"></div>
+                <button id="add-dish-btn">Додати страву</button>
+                <button id="calculate-btn">Порахувати</button>
+                <div id="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Кафе "Зупинка"</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="D:\JS\menu.js"></script>
+</body>
+</html>

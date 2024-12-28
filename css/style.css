@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fixed {
+    background-color: #100f0f;
+    position: sticky; /* Задає позицію елемента як "липку", так що він залишається видимим при прокручуванні */
+    top: 0; /* Визначає, що елемент "приклеїться" до верхньої частини вікна браузера, коли він досягне цієї позиції */
+    left: 0; /* Визначає, що елемент буде приклеєний до лівої сторони вікна браузера */
+    z-index: 9999; /* Встановлює порядок накладання (z-index) на 9999, щоб забезпечити, що елемент буде поверх інших елементів, які можуть перекривати його */
+    height: 60px;
+    box-shadow: 0px 4px 10px rgb(62, 62, 65);
+}
+
+.fixed .logo img {
+    height: 60px;
+}
+
+body {
+    background-image: url("D:/JS/image/fried-green-tomato-back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+p{
+   text-align:justify;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+section h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+section h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+section p {
+    font-size: 25px;
+    color: #e6e3e3;
+    line-height: 1.6;
+}
+
+#home{
+    width: 70%;
+    padding-right: 20px;
+}
+
+#home p{
+    padding: 20px;
+}
+
+
+
+#hours p{
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
+
+nav ul {
+    
+    list-style: none;
+    display: flex;
+    gap: 20px;
+        
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ececec;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: larger;
+}
+
+nav ul li a:hover {
+    color: #777;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin: 50px auto; 
+    max-width: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+#hidden-menu {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    text-align: center;
+    transition: right 0.3s ease;
+    color: #fff;
+}
+#hidden-menu .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 20;
+}
+
+#hidden-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#hidden-menu ul li {
+    margin: 20px 0;
+}
+
+#hidden-menu ul li a {
+    text-decoration: none;
+    color: #fdfcfc;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#hidden-menu ul li a:hover {
+    color: #777;
+}
+
+#show-menu {
+    background: none; /* Забирає будь-який фон */
+    border: none; /* Видаляє межу кнопки */
+    outline: none; /* Видаляє контур кнопки */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10;
+}
+
+#scroll-to-top {
+    display: none; /* Спочатку прихована */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: #555;
+}
+
+@media (min-width: 993px) {
+    #hours {
+        width: 25%;
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 992px) {
+    #home {
+        width: 100%;
+    }
+    
+    #hours {
+        display: none ;
+    }
+
+    #hidden-menu #hours {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        color: #fff;
+    }    
+}
+
+/*4 лаб*/
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.spinner div {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Галерея */
+.gallery {
+    display: flex; /* Встановлюємо галерею у вигляді гнучкого контейнера */
+    overflow-x:auto; /* Додаємо горизонтальне прокручування */
+    gap: 20px; 
+    padding: 20px;
+    scroll-snap-type: x mandatory; /* Додає ефект зупинки при скролінгу */
+}
+
+.gallery img {
+    flex: 0 0 auto;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    scroll-snap-align: start; /* Задає, що кожне зображення "прилипає" при прокручуванні */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+/*5 лаб*/
+
+/* Слайдер: */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.slider .previous, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .previous {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*лаб 6*/
+
+/* Стилі для кнопки "замовити" */
+.order-button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.order-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #ff6347;
+}
+/*7лаб*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.large-image-container {
+    flex: 1;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.large-image-container img {
+    width: 700px;
+    height: 490px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#thumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#thumbs li {
+    margin: 0;
+}
+
+#thumbs img {
+    width: 100px;
+    height: 70px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#thumbs img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*8лаб*/
+
+.menu-calculator {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+}
+
+.menu-calculator h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fdfcfc;
+}
+
+.menu-calculator #calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-calculator button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.menu-calculator button:hover {
+    background-color: #2176c7;
+}
+.dish-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+/*9лаб*/
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.button_form {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button_form:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    margin-top: 10px;
+}
+ul.error-list {
+    color: red;
+    padding-left: 20px;
+}
